@@ -12,18 +12,18 @@ fun swap(arr: Array<Int>, i: Int, j: Int) {
  * Return the index of the pivot.
  */
 fun partition(arr: Array<Int>, low: Int, high: Int): Int {
-    val pivotIndex = (low..high).random()
-    swap(arr, pivotIndex, high)
+    val randomIndex = (low..high).random()
+    swap(arr, randomIndex, high)
     val pivot = arr[high]
 
-    var i = low - 1
-    for (j in low..high) {
-        if (arr[j] <= pivot) {
-            i++
-            swap(arr, i, j)
+    var pivotIndex = low - 1
+    for (index in low..high) {
+        if (arr[index] <= pivot) {
+            pivotIndex++
+            swap(arr, pivotIndex, index)
         }
     }
-    return i
+    return pivotIndex
 }
 
 /**
