@@ -11,13 +11,13 @@ private fun swap(arr: Array<Int>, i: Int, j: Int) {
  * Partition the array around a randomly selected pivot.
  * Return the index of the pivot.
  */
-private fun partition(arr: Array<Int>, low: Int, high: Int): Int {
-    val randomIndex = (low..high).random()
-    swap(arr, randomIndex, high)
-    val pivot = arr[high]
+private fun partition(arr: Array<Int>, left: Int, right: Int): Int {
+    val randomIndex = (left..right).random()
+    swap(arr, randomIndex, right)
+    val pivot = arr[right]
 
-    var pivotIndex = low - 1
-    for (index in low..high) {
+    var pivotIndex = left - 1
+    for (index in left..right) {
         if (arr[index] <= pivot) {
             pivotIndex++
             swap(arr, pivotIndex, index)
@@ -29,11 +29,11 @@ private fun partition(arr: Array<Int>, low: Int, high: Int): Int {
 /**
  * Quick sort the array.
  */
-private fun quickSort(arr: Array<Int>, low: Int, high: Int) {
-    if (low < high) {
-        val pivotIndex = partition(arr, low, high)
-        quickSort(arr, low, pivotIndex - 1)
-        quickSort(arr, pivotIndex + 1, high)
+private fun quickSort(arr: Array<Int>, left: Int, right: Int) {
+    if (left < right) {
+        val pivotIndex = partition(arr, left, right)
+        quickSort(arr, left, pivotIndex - 1)
+        quickSort(arr, pivotIndex + 1, right)
     }
 }
 
