@@ -30,7 +30,7 @@
  *
  * 1 <= text1.length, text2.length <= 1000
  * text1 and text2 consist of only lowercase English characters.
- * @see <a https://leetcode.com/problems/longest-common-subsequence/">LeetCode</a>
+ * @see <a href="https://leetcode.com/problems/longest-common-subsequence/">LeetCode</a>
  */
 fun longestCommonSubsequence(text1: String, text2: String): Int {
     if (text1.isEmpty() || text2.isEmpty()) {

@@ -27,7 +27,7 @@
  * 1 <= arr.length <= 500
  * 0 <= arr[i] <= 10^9
  * 1 <= k <= arr.length
- * @see <a https://leetcode.com/problems/partition-array-for-maximum-sum/">LeetCode</a>
+ * @see <a href="https://leetcode.com/problems/partition-array-for-maximum-sum/">LeetCode</a>
  */
 fun maxSumAfterPartitioning(arr: IntArray, k: Int): Int {
     val arraySize = arr.size
