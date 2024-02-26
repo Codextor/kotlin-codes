@@ -31,15 +31,15 @@
  * @see <a href="https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/">LeetCode</a>
  */
 fun countTriplets(arr: IntArray): Int {
-    val prefixXorMap = mutableMapOf(0 to (1 to 0))
-    var xorSoFar = 0
-    var count = 0
+    val xorPrefixMap = mutableMapOf(0 to (1 to 0))
+    var xorAccumulator = 0
+    var tripletCount = 0
     arr.forEachIndexed { index, value ->
-        xorSoFar = xorSoFar xor value
-        prefixXorMap.getOrDefault(xorSoFar, 0 to 0).let { (first, second) ->
-            count += index * first - second
-            prefixXorMap[xorSoFar] = first + 1 to second + index + 1
+        xorAccumulator = xorAccumulator xor value
+        xorPrefixMap.getOrDefault(xorAccumulator, 0 to 0).let { (first, second) ->
+            tripletCount += index * first - second
+            xorPrefixMap[xorAccumulator] = first + 1 to second + index + 1
         }
     }
-    return count
+    return tripletCount
 }
