@@ -4,7 +4,7 @@ import kotlin.test.assertEquals
 class PassThePillowTest {
 
     @Test
-    fun testIsIsomorphic() {
+    fun testPassThePillow() {
         val testCases = listOf(
             Triple(4, 5, 2),
             Triple(3, 2, 3)
