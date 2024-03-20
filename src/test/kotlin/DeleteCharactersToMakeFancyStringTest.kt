@@ -1,7 +1,7 @@
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class DeleteCharacterstoMakeFancyStringTest {
+class DeleteCharactersToMakeFancyStringTest {
 
     @Test
     fun testMakeFancyString() {
