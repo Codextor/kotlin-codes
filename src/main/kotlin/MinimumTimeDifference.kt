@@ -19,7 +19,6 @@
  * timePoints[i] is in the format "HH:MM".
  * @see <a href="https://leetcode.com/problems/minimum-time-difference/">LeetCode</a>
  */
-
 fun findMinDifference(timePoints: List<String>): Int {
     val minutesInAnHour = 60
     val minutesInADay = 1440
