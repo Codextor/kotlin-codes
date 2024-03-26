@@ -36,9 +36,9 @@
  *
  * Constraints:
  *
- *     1 <= nums.length <= 10^5
- *     1 <= nums[i] <= 10^9
- *     0 <= limit <= 10^9
+ * 1 <= nums.length <= 10^5
+ * 1 <= nums[i] <= 10^9
+ * 0 <= limit <= 10^9
  *
  *
  * @see <a href="https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/">LeetCode</a>
