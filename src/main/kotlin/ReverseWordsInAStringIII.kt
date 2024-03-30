@@ -18,7 +18,7 @@
  *
  * Constraints:
  *
- * 1 <= s.length <= 5 * 104
+ * 1 <= s.length <= 5 * 10^4
  * s contains printable ASCII characters.
  * s does not contain any leading or trailing spaces.
  * There is at least one word in s.
